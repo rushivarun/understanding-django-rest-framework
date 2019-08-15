@@ -130,6 +130,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 REST_AUTH_SERIALIZERS = {
-    'LOGIN_SERIALIZER': 'users.serializers.login_serializer',
+    'LOGIN_SERIALIZER': 'employee.serializers.login_serializer',
 
 }

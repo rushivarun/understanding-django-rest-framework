@@ -6,6 +6,8 @@ routes = routers.DefaultRouter()
 routes.register('', EmployeeViewSet)
 
 urlpatterns = [
-    path('', include(routes.urls), name='employee_list'),
+    path('details/', include(routes.urls), name='employee_list'),
+    path('auth/login/', login_view.as_view(), name='auth login'),
+    path('auth/logout/', logout_view.as_view(), name='auth logout'),
 
 ]
