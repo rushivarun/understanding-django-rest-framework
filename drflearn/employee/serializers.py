@@ -18,9 +18,10 @@ class login_serializer(serializers.Serializer):
     def validate(self, data):
         username = data.get('username', '')
         password = data.get('password', '')
-
+        print(username)
+        print(password)
         if username and password:
-            user = authenticate(username, password)
+            user = authenticate(username=username, password=password)
             if user:
                 if user.is_active:
                     data['user'] = user
